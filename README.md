@@ -32,7 +32,7 @@ cd simple-cidr-calculator
 
 2. Build the binary:
 ```bash
-go build -o cidr-calc
+go build -o simple-cidr-calculator
 ```
 
 3. (Optional) Install globally:
@@ -63,14 +63,14 @@ make test
 ### Basic Usage
 
 ```bash
-cidr-calc <CIDR>
+simple-cidr-calculator <CIDR>
 ```
 
 ### Command Line Options
 
 ```
 Usage:
-  cidr-calc [OPTIONS] <CIDR>
+  simple-cidr-calculator [OPTIONS] <CIDR>
 
 Arguments:
   CIDR                 Network in CIDR notation (e.g., 192.168.1.0/24)
@@ -85,7 +85,7 @@ Options:
 
 #### Basic Network Analysis
 ```bash
-cidr-calc 192.168.1.0/24
+simple-cidr-calculator 192.168.1.0/24
 ```
 
 Output:
@@ -112,24 +112,24 @@ Subnet Information:
 
 #### Save to Text File
 ```bash
-cidr-calc -o network-report.txt 172.16.0.0/16
+simple-cidr-calculator -o network-report.txt 172.16.0.0/16
 ```
 
 #### Generate HTML Report
 ```bash
-cidr-calc --html -o network-report.html 10.0.0.0/8
+simple-cidr-calculator --html -o network-report.html 10.0.0.0/8
 ```
 
 #### Edge Cases
 
 **Point-to-Point Link (/31)**:
 ```bash
-cidr-calc 192.168.1.0/31
+simple-cidr-calculator 192.168.1.0/31
 ```
 
 **Host Route (/32)**:
 ```bash
-cidr-calc 192.168.1.1/32
+simple-cidr-calculator 192.168.1.1/32
 ```
 
 ## 📋 Output Formats
@@ -200,13 +200,13 @@ go test -tags=integration ./...
 
 ```bash
 # Linux
-GOOS=linux GOARCH=amd64 go build -o cidr-calc-linux
+GOOS=linux GOARCH=amd64 go build -o simple-cidr-calculator-linux
 
 # macOS
-GOOS=darwin GOARCH=amd64 go build -o cidr-calc-macos
+GOOS=darwin GOARCH=amd64 go build -o simple-cidr-calculator-macos
 
 # Windows
-GOOS=windows GOARCH=amd64 go build -o cidr-calc-windows.exe
+GOOS=windows GOARCH=amd64 go build -o simple-cidr-calculator-windows.exe
 ```
 
 ## 📄 License
@@ -223,10 +223,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 🐛 Support
-
-For issues and questions, please [create an issue](https://github.com/marc-poljak/simple-cidr-calculator/issues) in the repository.
-
 ## 🙏 Credits
 
-Enhanced and improved with assistance from [Kiro AI](https://kiro.ai) - an AI-powered development assistant that helped optimize the codebase, improve documentation, and add comprehensive testing.
+Enhanced and improved with assistance from [Kiro AI](https://kiro.dev) - an AI-powered development assistant that helped optimize the codebase, improve documentation, and add comprehensive testing.
